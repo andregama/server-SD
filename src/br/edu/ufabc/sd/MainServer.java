@@ -48,6 +48,19 @@ public class MainServer {
                             rep.setPlayerContent(player);
                         }
                         break;
+                    case Requisicao.ALL_PLAYERS:
+                        System.out.println("DEBUG - All Players ");
+                        int[] playersIds = arquivo.listPlayers();
+                        if(playersIds == null)
+                        {
+                            rep.setMessageStatus(Resposta.ALL_PLAYERS_ERROR);
+                        }
+                        else
+                        {
+                            rep.setMessageStatus(Resposta.ALL_PLAYERS_OK);
+                            rep.setPlayersList(playersIds);
+                        }
+                        break;
                     default:
                         System.out.println("DEBUG - Error");
                         rep.setMessageStatus(Resposta.NEW_PLAYER_ERROR);
