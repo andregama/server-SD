@@ -18,8 +18,8 @@ public class MainServer {
     public static void main(String args[]){
         try{
             ServerSocket server;
-            server = new ServerSocket(20000);  // criei meu canal de comunicação
-            System.out.println("Server Started at 20000... Waiting for connections");
+            server = new ServerSocket(21000);  // criei meu canal de comunicação
+            System.out.println("Server Started at 21000... Waiting for connections");
             
             do{
                 
